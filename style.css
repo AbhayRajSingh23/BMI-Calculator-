@@ -1,46 +1,102 @@
+/* Global styles */
 body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
-    background-color: #797978;
-    padding-left: 30px;
-  }
-  #height,
-  #weight {
-    width: 150px;
-    height: 25px;
-    margin-top: 30px;
-  }
-  
-  #weight-guide {
-    margin-left: 75px;
-    margin-top: 25px;
-  }
-  
-  .guide, 
-  #results {
-    font-size: 35px;
-    margin-left: 90px;
-    margin-top: 20px;
-    color: rgb(241, 241, 241);
-  }
-  
-  button {
-    width: 150px;
-    height: 35px;
-    margin-left: 90px;
-    margin-top: 25px;
-    background-color: #fff;
-    padding: 1px 30px;
-    border-radius: 8px;
-    color: #212121;
-    text-decoration: none;
-    border: 2px solid #212121;
-  
-    font-size: 25px;
-  }
-  
-  h1 {
-    padding-left: 15px;
-    padding-top: 25px;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    width: 100%;
+    max-width: 400px;
+}
+
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* Form styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #34495e;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+button {
+    background-color: #3498db;
+    color: #ffffff;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Results and guide styles */
+#results, .guide {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+#weight-guide {
+    margin-top: 1.5rem;
+    background-color: #ecf0f1;
+    border-radius: 4px;
+    padding: 1rem;
+}
+
+#weight-guide h3 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+#weight-guide p {
+    margin: 0.5rem 0;
+    color: #34495e;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+    .container {
+        padding: 1rem;
     }
-  
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    input[type="text"], button {
+        font-size: 0.9rem;
+    }
+}
